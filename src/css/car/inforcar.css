@@ -1,0 +1,135 @@
+.car {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.car-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .car-container {
+    flex-direction: row;
+  }
+}
+
+.car-detail__image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.car-detail__title {
+  text-align: center;
+}
+
+.car-detail__name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.car-detail__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.car-detail__unit {
+  font-size: 1rem;
+  color: #718096;
+  margin-left: 5px;
+}
+
+.car-detail__img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.car-detail__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.car-detail-list {
+  margin-top: 20px;
+}
+
+.car-detail-list h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.car-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.car-detail__specs {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-detail__specs h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 15px;
+}
+
+.car-detail__spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.car-detail__spec-item p {
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.car-detail__spec-item p strong {
+  color: #1a202c;
+  margin-right: 5px;
+}
+
+.car-detail__equipment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.car-detail__equipment p {
+  font-size: 1rem;
+  color: #2d3748;
+}
