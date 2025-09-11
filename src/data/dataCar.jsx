@@ -7,9 +7,9 @@ const dataCar = [
     image: "https://bmw-hanoi.vn/wp-content/uploads/2022/12/bmw-x4-20223-removebg.png",
     types: "Sedan",
     gallery: [
-      "bmw-m3-inside-1.png",
-      "bmw-m3-inside-2.png",
-      "bmw-m3-inside-3.png",
+      "https://bmw-hanoi.vn/wp-content/uploads/2022/12/bmw-x4-20223-removebg.png",
+      "https://bmw-hanoi.vn/wp-content/uploads/2022/12/bmw-x4-20223-removebg.png",
+      "https://bmw-hanoi.vn/wp-content/uploads/2022/12/bmw-x4-20223-removebg.png",
     ],
     specification: {
       gearBox: "Automatic",

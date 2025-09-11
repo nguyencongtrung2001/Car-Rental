@@ -1,45 +1,47 @@
+/* ====== Vùng tổng ====== */
 .car {
   padding: 40px 20px;
   background-color: #f8f9fa;
-  min-height: 100vh;
+  max-width: 100%;
 }
 
+/* ====== Container ====== */
 .car-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 30px;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
-@media (min-width: 768px) {
-  .car-container {
-    flex-direction: row;
-  }
-}
-
+/* ====== Ảnh + Gallery ====== */
 .car-detail__image {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 200px;
 }
 
 .car-detail__title {
-  text-align: center;
+  text-align: left;
 }
 
 .car-detail__name {
   font-size: 2.5rem;
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 10px;
 }
 
 .car-detail__price {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #5937e0;
 }
 
 .car-detail__unit {
@@ -62,17 +64,7 @@
   object-fit: cover;
 }
 
-.car-detail-list {
-  margin-top: 20px;
-}
-
-.car-detail-list h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1a202c;
-  margin-bottom: 10px;
-}
-
+/* Gallery ảnh phụ */
 .car-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -91,45 +83,139 @@
   transform: scale(1.05);
 }
 
+/* ====== Phần thông số kỹ thuật ====== */
 .car-detail__specs {
   flex: 1;
   background-color: #fff;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  min-width: 300px;
+  align-self: flex-end; /* Đẩy xuống dưới cùng */
+  margin-bottom: 40px;
 }
 
 .car-detail__specs h3 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1a202c;
-  margin-bottom: 15px;
 }
 
-.car-detail__spec-item {
+/* Lưới 2 dòng × 3 cột */
+.car-detail__spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Card từng thông số */
+.spec-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.spec-card-item:hover {
+  transform: translateY(-3px);
+}
+
+.icon-spec {
+  font-size: 1.8rem;
+  color: #4a5568;
+}
+
+.spec-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
 }
 
-.car-detail__spec-item p {
+.spec-title {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.spec-name {
   font-size: 1rem;
+  font-weight: 600;
   color: #2d3748;
 }
-
-.car-detail__spec-item p strong {
-  color: #1a202c;
-  margin-right: 5px;
+/* Button rent */
+.car-rent-btn {
+  background-color: #5937e0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
+/* Container equipment */
 .car-detail__equipment {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  gap: 15px; /* Khoảng cách giữa các item */
+  width: 100%;
+  margin-top: 15px;
 }
 
-.car-detail__equipment p {
+/* Mỗi item */
+.car-detail__equipment-item {
+  background-color: #f1f5f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
   font-size: 1rem;
+  font-weight: 500;
   color: #2d3748;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.car-detail__equipment-item:hover {
+  transform: scale(1.05);
+  background-color: #e2e8f0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1024px) {
+  /* Tablet: vẫn giữ layout row, chỉ giảm khoảng cách */
+  .car-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile: chuyển sang dọc */
+  .car-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car-detail__img,
+  .car-detail__specs {
+    width: 100%;
+    max-width: 100%;
+    align-self: unset; /* Xóa căn chỉnh xuống dưới */
+    margin-top: 0;
+  }
+  .car-detail__equipment {
+    grid-template-columns: repeat(2, 1fr); /* Mobile: 2 cột */
+  }
+}
+@media (max-width: 480px) {
+  .car-detail__equipment {
+    grid-template-columns: 1fr; /* Điện thoại nhỏ: 1 cột */
+  }
 }

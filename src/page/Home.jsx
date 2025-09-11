@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <Feature />
       <StatsSection />
-      <CarSelection />
+      <CarSelection title="Choose the car that suits you" />
       <Fact />
       <Download />
       <Connect />
