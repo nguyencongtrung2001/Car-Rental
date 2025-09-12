@@ -8,7 +8,7 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     
     const navList = [
-        { id: 1, title: "Home", link: "/" },
+        { id: 1, title: "Home", link: "/home" }, // ✅ Sửa từ "/" thành "/home"
         { id: 2, title: "Vehicles", link: "/vehicles" },
         { id: 3, title: "Detail", link: "/detail" },
         { id: 4, title: "About Us", link: "/about" },

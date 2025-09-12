@@ -28,7 +28,7 @@
 .download-app__desc {
   font-size: 1rem;
   color: #555;
-  list-style: 1.6;
+  line-height: 1.6; /* ✅ Sửa từ "list-style" thành "line-height" */
   max-width: 500px;
   margin-bottom: 30px;
 }
@@ -70,7 +70,9 @@
   height: auto;
   object-fit: contain;
 }
-@media (max-width) {
+
+/* ✅ Sửa media query thiếu giá trị */
+@media (max-width: 768px) {
   .download-container {
     flex-direction: column;
     text-align: center;

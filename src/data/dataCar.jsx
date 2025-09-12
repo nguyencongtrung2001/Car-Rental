@@ -29,9 +29,9 @@ const dataCar = [
     image: "https://hunggiapaints.com/upload/images/son-xe-o-to-mau-xanh-la-xe-audi-lx6p.png",
     types: "Sedan",
     gallery: [
-      "audi-a4-inside-1.png",
-      "audi-a4-inside-2.png",
-      "audi-a4-inside-3.png",
+      "https://hunggiapaints.com/upload/images/son-xe-o-to-mau-xanh-la-xe-audi-lx6p.png",
+      "https://hunggiapaints.com/upload/images/son-xe-o-to-mau-xanh-la-xe-audi-lx6p.png",
+      "https://hunggiapaints.com/upload/images/son-xe-o-to-mau-xanh-la-xe-audi-lx6p.png",
     ],
     specification: {
       gearBox: "Manual",
@@ -57,9 +57,9 @@ const dataCar = [
     image: "https://haxaco-mercedes.com/wp-content/uploads/2022/09/C300-AMG-CBU-2022-11-1.png",
     types: "Sedan",
     gallery: [
-      "mercedes-c-inside-1.png",
-      "mercedes-c-inside-2.png",
-      "mercedes-c-inside-3.png",
+      "https://haxaco-mercedes.com/wp-content/uploads/2022/09/C300-AMG-CBU-2022-11-1.png",
+      "https://haxaco-mercedes.com/wp-content/uploads/2022/09/C300-AMG-CBU-2022-11-1.png",
+      "https://haxaco-mercedes.com/wp-content/uploads/2022/09/C300-AMG-CBU-2022-11-1.png",
     ],
     specification: {
       gearBox: "Automatic",
@@ -79,9 +79,9 @@ const dataCar = [
     image: "https://png.pngtree.com/png-vector/20240726/ourmid/pngtree-3d-tesla-car-isolated-on-transparent-background-png-image_13238404.png",
     types: "Sedan",
     gallery: [
-      "tesla-model3-inside-1.png",
-      "tesla-model3-inside-2.png",
-      "tesla-model3-inside-3.png",
+      "https://png.pngtree.com/png-vector/20240726/ourmid/pngtree-3d-tesla-car-isolated-on-transparent-background-png-image_13238404.png",
+      "https://png.pngtree.com/png-vector/20240726/ourmid/pngtree-3d-tesla-car-isolated-on-transparent-background-png-image_13238404.png",
+      "https://png.pngtree.com/png-vector/20240726/ourmid/pngtree-3d-tesla-car-isolated-on-transparent-background-png-image_13238404.png",
     ],
     specification: {
       gearBox: "Automatic",
@@ -101,9 +101,9 @@ const dataCar = [
     image: "https://vietnam-toyota.com.vn/wp-content/uploads/2020/04/Camry-2023-Do.png",
     types: "Sedan",
     gallery: [
-      "toyota-camry-inside-1.png",
-      "toyota-camry-inside-2.png",
-      "toyota-camry-inside-3.png",
+      "https://vietnam-toyota.com.vn/wp-content/uploads/2020/04/Camry-2023-Do.png",
+      "https://vietnam-toyota.com.vn/wp-content/uploads/2020/04/Camry-2023-Do.png",
+      "https://vietnam-toyota.com.vn/wp-content/uploads/2020/04/Camry-2023-Do.png",
     ],
     specification: {
       gearBox: "Automatic",
@@ -129,9 +129,9 @@ const dataCar = [
     image: "https://hondaotosgquan7.vn/wp-content/uploads/2022/02/Honda_Civic_honda_oto_vo_van_kiet-3.png",
     types: "Sedan",
     gallery: [
-      "honda-civic-inside-1.png",
-      "honda-civic-inside-2.png",
-      "honda-civic-inside-3.png",
+      "https://hondaotosgquan7.vn/wp-content/uploads/2022/02/Honda_Civic_honda_oto_vo_van_kiet-3.png",
+      "https://hondaotosgquan7.vn/wp-content/uploads/2022/02/Honda_Civic_honda_oto_vo_van_kiet-3.png",
+      "https://hondaotosgquan7.vn/wp-content/uploads/2022/02/Honda_Civic_honda_oto_vo_van_kiet-3.png",
     ],
     specification: {
       gearBox: "Manual",
@@ -151,9 +151,9 @@ const dataCar = [
     image: "https://png.pngtree.com/png-vector/20240913/ourlarge/pngtree-ford-mustang-png-image_13249293.png",
     types: "Sedan",
     gallery: [
-      "ford-mustang-inside-1.png",
-      "ford-mustang-inside-2.png",
-      "ford-mustang-inside-3.png",
+      "https://png.pngtree.com/png-vector/20240913/ourlarge/pngtree-ford-mustang-png-image_13249293.png",
+      "https://png.pngtree.com/png-vector/20240913/ourlarge/pngtree-ford-mustang-png-image_13249293.png",
+      "https://png.pngtree.com/png-vector/20240913/ourlarge/pngtree-ford-mustang-png-image_13249293.png",
     ],
     specification: {
       gearBox: "Automatic",
@@ -170,12 +170,13 @@ const dataCar = [
     name: "Hyundai Tucson",
     price: 32,
     priceUnit: "USD/day",
-    image: "hyundai-tucson-main.png",
-    types: "Sedan",
+    // ✅ Sửa link ảnh bị thiếu
+    image: "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/vhs/Hyundai-Tucson.png",
+    types: "SUV", // ✅ Sửa từ "Sedan" thành "SUV"
     gallery: [
-      "hyundai-tucson-inside-1.png",
-      "hyundai-tucson-inside-2.png",
-      "hyundai-tucson-inside-3.png",
+      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/vhs/Hyundai-Tucson.png",
+      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/vhs/Hyundai-Tucson.png",
+      "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/vhs/Hyundai-Tucson.png",
     ],
     specification: {
       gearBox: "Automatic",
@@ -198,12 +199,13 @@ const dataCar = [
     name: "Lamborghini Aventador",
     price: 120,
     priceUnit: "USD/day",
-    image: "lamborghini-aventador-main.png",
-    types: "Sedan",
+    // ✅ Sửa link ảnh bị thiếu
+    image: "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
+    types: "Sports", // ✅ Sửa từ "Sedan" thành "Sports"
     gallery: [
-      "lamborghini-inside-1.png",
-      "lamborghini-inside-2.png",
-      "lamborghini-inside-3.png",
+      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
+      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
+      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
     ],
     specification: {
       gearBox: "Automatic",
