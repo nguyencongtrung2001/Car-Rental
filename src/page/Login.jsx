@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/login.css";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,6 +16,11 @@ const Login = () => {
     alert("Login form submitted!");
   };
 
+  const  navigate = useNavigate();
+  
+ const handleForward = () =>{
+    navigate("/home");
+ }
   return (
     <div className="login">
       <div className="login-container">
@@ -45,7 +51,7 @@ const Login = () => {
           </h5>
 
           {/* Button */}
-          <button type="submit" className="login-btn">
+          <button type="submit" className="login-btn" onClick={handleForward}>
             Log In
           </button>
         </form>

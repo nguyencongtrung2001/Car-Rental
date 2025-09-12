@@ -33,32 +33,28 @@
   color: #5937e0;
 }
 
-/* ===== HERO SECTION - SỬA CHÍNH TẠI ĐÂY ===== */
-.contact-hero {
+
+/* ===== HERO SECTION ===== */
+.booking-hero-section {
   background: #fff;
   padding: 3rem 1rem;
-  overflow: hidden; /* Prevent overflow issues */
+  overflow: hidden;
 }
 
-.contact-hero-container {
+.booking-hero-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row; /* ✅ Đảm bảo là row */
-  flex-wrap: nowrap; /* ✅ Không wrap để giữ layout */
   gap: 3rem;
   align-items: center;
   position: relative;
 }
 
-/* ===== FORM WRAPPER - SỬA FLEX ===== */
-.booking-form-wrapper {
-  /* flex: 0 0 400px; ✅ Fixed width thay vì flex: 1 */
-  flex:1;
-  width: 400px;
-  max-width: 400px;
+/* ===== BOOKING FORM (chiếm 1 phần) ===== */
+.booking-form-section {
+  flex: 1; /* 1 phần */
   min-width: 350px;
-  z-index: 10; /* Đảm bảo form nằm trên ảnh */
+  z-index: 10; /* Form nằm trên ảnh */
 }
 
 .booking-form {
@@ -115,16 +111,16 @@
   background: #e08800;
 }
 
-/* ===== HERO IMAGE - SỬA FLEX ===== */
-.hero-image {
-  flex: 2; /* ✅ Chiếm phần còn lại */
-  min-width: 400; /* ✅ Cho phép shrink */
+/* ===== HERO IMAGE (chiếm 2 phần) ===== */
+.hero-image-section {
+  flex: 2; /* 2 phần */
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-image img {
+.hero-image-section img {
   width: 100%;
   max-width: 100%;
   height: 400px;
@@ -132,6 +128,7 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Contact Info Section */
 .contact-info-section {

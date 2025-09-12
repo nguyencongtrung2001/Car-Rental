@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { IoPlayCircle } from "react-icons/io5";
 import { FaCar, FaUsers, FaCalendarAlt, FaRoute } from "react-icons/fa";
-import "../css/about.css"
+import "../css/about.css";
 
 const About = () => {
   const stats = [
@@ -31,25 +31,29 @@ const About = () => {
     {
       id: 1,
       title: "Variety Brands",
-      description: "Choose from a wide selection of vehicles from top brands worldwide.",
+      description:
+        "Choose from a wide selection of vehicles from top brands worldwide.",
       icon: "🚗",
     },
     {
       id: 2,
       title: "Awesome Support",
-      description: "Our customer support is available 24/7 to help you with any issues.",
+      description:
+        "Our customer support is available 24/7 to help you with any issues.",
       icon: "🎧",
     },
     {
       id: 3,
       title: "Maximum Freedom",
-      description: "Drive where you want, when you want with our flexible rental options.",
+      description:
+        "Drive where you want, when you want with our flexible rental options.",
       icon: "🗝️",
     },
     {
       id: 4,
       title: "Flexibility On The Go",
-      description: "Change your plans anytime with our flexible booking policies.",
+      description:
+        "Change your plans anytime with our flexible booking policies.",
       icon: "📱",
     },
   ];
@@ -147,28 +151,36 @@ const About = () => {
       </section>
 
       {/* App Download Section */}
-      <section className="about-download">
-        <div className="download-section">
-          <div className="download-content">
-            <div className="phone-mockup">
-              <div className="phone-screen"></div>
+      <section className="app-download-section">
+        <div className="app-download-container">
+          <div className="app-download-content">
+            {/* Phone Mockup */}
+            <div className="app-phone-wrapper">
+              <div className="app-phone-frame">
+                <img
+                  src="https://png.pngtree.com/png-clipart/20230206/ourmid/pngtree-cell-phone-mockup-png-image_6584021.png"
+                  alt="App Phone Mockup"
+                />
+              </div>
             </div>
-            <div className="download-info">
-              <span className="download-label">Download our app</span>
-              <h2>Download our app</h2>
-              <p>
-                Experience the convenience of booking your perfect car rental 
-                right from your mobile device. Download our app for exclusive 
+
+            {/* Download Info */}
+            <div className="app-download-info">
+              <span className="app-download-label">Download our app</span>
+              <h2 className="app-download-title">Download our app</h2>
+              <p className="app-download-description">
+                Experience the convenience of booking your perfect car rental
+                right from your mobile device. Download our app for exclusive
                 deals and seamless booking experience.
               </p>
-              <div className="download-buttons">
+              <div className="app-store-buttons">
                 <button className="app-store-btn">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY_o-G9mMFogqWSeYzzRALpqqr8E-pvKn39w&s"
                     alt="Download on App Store"
                   />
                 </button>
-                <button className="play-store-btn">
+                <button className="google-play-btn">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
                     alt="Get it on Google Play"
@@ -187,8 +199,8 @@ const About = () => {
           <div className="reviews-grid">
             <div className="review-card">
               <p>
-                "Excellent service and quality vehicles. The booking process 
-                was seamless and the customer support was outstanding."
+                "Excellent service and quality vehicles. The booking process was
+                seamless and the customer support was outstanding."
               </p>
               <div className="reviewer">
                 <div className="reviewer-avatar"></div>
@@ -200,8 +212,8 @@ const About = () => {
             </div>
             <div className="review-card">
               <p>
-                "Great car rental experience. Wide selection of vehicles and 
-                competitive prices. Highly recommend for anyone looking for 
+                "Great car rental experience. Wide selection of vehicles and
+                competitive prices. Highly recommend for anyone looking for
                 reliable transportation."
               </p>
               <div className="reviewer">
@@ -214,7 +226,7 @@ const About = () => {
             </div>
             <div className="review-card">
               <p>
-                "Amazing service! The car was clean, well-maintained, and the 
+                "Amazing service! The car was clean, well-maintained, and the
                 rental process was quick and easy. Will definitely use again."
               </p>
               <div className="reviewer">
@@ -237,41 +249,50 @@ const About = () => {
             <div className="faq-item">
               <h3>How does it work?</h3>
               <p>
-                Browse our extensive fleet of vehicles, select your preferred car, 
-                choose your rental dates, and complete the booking process online. 
-                Pick up your vehicle at the designated location and enjoy your journey.
+                Browse our extensive fleet of vehicles, select your preferred
+                car, choose your rental dates, and complete the booking process
+                online. Pick up your vehicle at the designated location and
+                enjoy your journey.
               </p>
             </div>
             <div className="faq-item">
               <h3>Can I rent a car without a credit card?</h3>
               <p>
-                While a credit card is preferred for security purposes, we accept 
-                debit cards and cash deposits in certain circumstances. Contact our 
-                support team for alternative payment options.
+                While a credit card is preferred for security purposes, we
+                accept debit cards and cash deposits in certain circumstances.
+                Contact our support team for alternative payment options.
               </p>
             </div>
             <div className="faq-item">
               <h3>What are the requirements for renting a car?</h3>
               <p>
-                You must be at least 21 years old, have a valid driver's license, 
-                and provide a major credit card. International customers need a 
-                valid passport and international driving permit.
+                You must be at least 21 years old, have a valid driver's
+                license, and provide a major credit card. International
+                customers need a valid passport and international driving
+                permit.
               </p>
             </div>
             <div className="faq-item">
-              <h3>Does Car Rental allow me to drive with animals to the rental vehicle?</h3>
+              <h3>
+                Does Car Rental allow me to drive with animals to the rental
+                vehicle?
+              </h3>
               <p>
-                Yes, pets are allowed in our rental vehicles with prior notification 
-                and a small additional cleaning fee. Please inform us during booking 
-                if you plan to travel with pets.
+                Yes, pets are allowed in our rental vehicles with prior
+                notification and a small additional cleaning fee. Please inform
+                us during booking if you plan to travel with pets.
               </p>
             </div>
             <div className="faq-item">
-              <h3>Does Car Rental offer coverage protection for purchases with my rental?</h3>
+              <h3>
+                Does Car Rental offer coverage protection for purchases with my
+                rental?
+              </h3>
               <p>
-                We offer comprehensive insurance packages including collision damage 
-                waiver, theft protection, and liability coverage. Additional coverage 
-                options are available for your peace of mind.
+                We offer comprehensive insurance packages including collision
+                damage waiver, theft protection, and liability coverage.
+                Additional coverage options are available for your peace of
+                mind.
               </p>
             </div>
           </div>

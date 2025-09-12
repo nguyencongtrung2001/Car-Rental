@@ -6,8 +6,8 @@
 
 /* Hero Section */
 .about-hero {
-  background: linear-gradient(135deg, #5937e0 0%, #4528b5 100%);
-  color: white;
+  /* background: linear-gradient(135deg, #5937e0 0%, #4528b5 100%); */
+  color: rgb(22, 22, 22);
   padding: 4rem 0;
   text-align: center;
 }
@@ -34,7 +34,13 @@
   padding: 4rem 0;
   background: #fff;
 }
-
+.about-intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:2rem
+}
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -50,22 +56,26 @@
 }
 
 .intro-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  justify-content: center;
 }
 
 .feature-card {
+  flex: 1 1 calc(50% - 2rem); /* 2 cột */
+  max-width: calc(50% - 2rem);
   text-align: center;
   padding: 2rem;
   border-radius: 12px;
   transition: transform 0.3s ease;
+  background: #f9f9f9; /* nền nhẹ để phân biệt các card */
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
 }
+
 
 .feature-icon {
   font-size: 3rem;
@@ -215,78 +225,94 @@
 }
 
 /* Download Section */
-.about-download {
+/* Background section */
+.app-download-section {
   background: #5937e0;
   padding: 4rem 0;
+  border-radius: 15px;
+  margin: 2rem;
 }
 
-.download-section {
+.app-download-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.download-content {
+/* Content layout */
+.app-download-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
-  color: white;
+  color: #fff;
 }
 
-.phone-mockup {
-  width: 200px;
-  height: 400px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Phone mockup */
+.app-phone-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 250px; /* Cố định chiều rộng khu vực mockup */
 }
 
-.phone-screen {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
+.app-phone-frame img {
+  width: 230px;
+  height: auto;
+  display: block;
 }
 
-.download-info {
+/* Download text info */
+.app-download-info {
   flex: 1;
+  max-width: 600px;
 }
 
-.download-label {
+.app-download-label {
   color: #ff9e0c;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-.download-info h2 {
+.app-download-title {
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 
-.download-info p {
-  margin-bottom: 2rem;
+.app-download-description {
   line-height: 1.6;
   opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
 }
 
-.download-buttons {
+/* Store Buttons */
+.app-store-buttons {
   display: flex;
   gap: 1rem;
 }
 
 .app-store-btn,
-.play-store-btn {
+.google-play-btn {
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.download-buttons img {
+.app-store-btn:hover,
+.google-play-btn:hover {
+  transform: translateY(-3px);
+}
+
+.app-store-buttons img {
   width: 150px;
   height: auto;
+  display: block;
 }
 
 /* Reviews Section */

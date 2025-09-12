@@ -200,12 +200,12 @@ const dataCar = [
     price: 120,
     priceUnit: "USD/day",
     // ✅ Sửa link ảnh bị thiếu
-    image: "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
+    image: "https://www.pngplay.com/wp-content/uploads/13/Lamborghini-Aventador-S-PNG-Photos.png",
     types: "Sports", // ✅ Sửa từ "Sedan" thành "Sports"
     gallery: [
-      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
-      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
-      "https://www.pngall.com/wp-content/uploads/8/Yellow-Lamborghini-PNG-Image.png",
+      "https://www.pngplay.com/wp-content/uploads/13/Lamborghini-Aventador-S-PNG-Photos.png",
+      "https://www.pngplay.com/wp-content/uploads/13/Lamborghini-Aventador-S-PNG-Photos.png",
+      "https://www.pngplay.com/wp-content/uploads/13/Lamborghini-Aventador-S-PNG-Photos.png",
     ],
     specification: {
       gearBox: "Automatic",

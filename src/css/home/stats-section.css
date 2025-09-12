@@ -60,21 +60,19 @@ body {
 }
 
 .stats-section__item__number {
-  font-size: 1.5rem;
-  color: #5937E0;
-  font-weight: bold;
+ color: #fff;
+ font-weight: bold;
+ background: #5937E0;
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+ font-size: 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
-/* .stats-section__item__number::after {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #5937E0;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-} */
+
 
 .stats-section__item__content h1 {
   font-size: 1.3rem;

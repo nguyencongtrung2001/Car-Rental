@@ -3,7 +3,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { IoLocation, IoMail, IoCall, IoTime } from "react-icons/io5";
 import "../css/contact.css";
-
+import toyota from "../assets/brand/toyota.png";
+import ford from "../assets/brand/ford.png";
+import mercedes from "../assets/brand/mercedes.png";
+import jeep from "../assets/brand/jeep.png";
+import bmw from "../assets/brand/bmw.png";
+import audi from "../assets/brand/audi.png";
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,27 +74,27 @@ const Contact = () => {
   const carBrands = [
     {
       name: "Toyota",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Toyota-Logo.png",
+      logo: toyota,
     },
     {
       name: "Ford",
-      logo: "https://logos-world.net/wp-content/uploads/2021/08/Ford-Logo.png",
+      logo: ford,
     },
     {
       name: "Mercedes",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Mercedes-Logo.png",
+      logo: mercedes,
     },
     {
       name: "Jeep",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Jeep-Logo.png",
+      logo: jeep,
     },
     {
       name: "BMW",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/BMW-Logo.png",
+      logo: bmw,
     },
     {
       name: "Audi",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Audi-Logo.png",
+      logo: audi,
     },
   ];
 
@@ -110,10 +115,10 @@ const Contact = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="contact-hero">
-        <div className="contact-hero-container">
+      <section className="booking-hero-section">
+        <div className="booking-hero-container">
           {/* Booking Form */}
-          <div className="booking-form-wrapper">
+          <div className="booking-form-section">
             <form className="booking-form" onSubmit={handleSubmit}>
               <h2>Book your car</h2>
               <div className="form-field">
@@ -167,7 +172,7 @@ const Contact = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="hero-image">
+          <div className="hero-image-section">
             <img
               src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop"
               alt="Car rental background"

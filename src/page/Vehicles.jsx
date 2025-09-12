@@ -7,6 +7,12 @@ import { FaGasPump, FaRegSnowflake, FaUsers } from "react-icons/fa";
 import { IoCarSport } from "react-icons/io5";
 import dataCar from "../data/dataCar";
 import "../css/vehicles.css";
+import toyota from "../assets/brand/toyota.png";
+import ford from "../assets/brand/ford.png";
+import mercedes from "../assets/brand/mercedes.png";
+import jeep from "../assets/brand/jeep.png";
+import bmw from "../assets/brand/bmw.png";
+import audi from "../assets/brand/audi.png";
 
 const Vehicles = () => {
   const [selectedCategory, setSelectedCategory] = useState("All vehicles");
@@ -36,27 +42,27 @@ const Vehicles = () => {
   const carBrands = [
     {
       name: "Toyota",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Toyota-Logo.png",
+      logo: toyota,
     },
     {
       name: "Ford",
-      logo: "https://logos-world.net/wp-content/uploads/2021/08/Ford-Logo.png",
+      logo: ford,
     },
     {
       name: "Mercedes",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Mercedes-Logo.png",
+      logo: mercedes,
     },
     {
       name: "Jeep",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Jeep-Logo.png",
+      logo: jeep,
     },
     {
       name: "BMW",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/BMW-Logo.png",
+      logo: bmw,
     },
     {
       name: "Audi",
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Audi-Logo.png",
+      logo: audi,
     },
   ];
 
@@ -146,65 +152,7 @@ const Vehicles = () => {
         </div>
       </section>
 
-      {/* Bottom Contact Section */}
-      <section className="vehicles-contact">
-        <div className="contact-container">
-          <div className="contact-info">
-            <div className="contact-item">
-              <h4>Address</h4>
-              <p>Oxford Ave. Cary, NC 27511</p>
-            </div>
-            <div className="contact-item">
-              <h4>Email</h4>
-              <p>nwiger@yahoo.com</p>
-            </div>
-            <div className="contact-item">
-              <h4>Phone</h4>
-              <p>+537 547-6401</p>
-            </div>
-          </div>
-
-          <div className="footer-sections">
-            <div className="footer-section">
-              <h4>Useful links</h4>
-              <ul>
-                <li>About us</li>
-                <li>Contact us</li>
-                <li>Gallery</li>
-                <li>Blog</li>
-                <li>F.A.Q</li>
-              </ul>
-            </div>
-
-            <div className="footer-section">
-              <h4>Vehicles</h4>
-              <ul>
-                <li>Sedan</li>
-                <li>Cabriolet</li>
-                <li>Pickup</li>
-                <li>Minivan</li>
-                <li>SUV</li>
-              </ul>
-            </div>
-
-            <div className="footer-section">
-              <h4>Download App</h4>
-              <div className="download-buttons">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY_o-G9mMFogqWSeYzzRALpqqr8E-pvKn39w&s"
-                  alt="Download on App Store"
-                  className="download-btn"
-                />
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
-                  alt="Get it on Google Play"
-                  className="download-btn"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+ 
 
       <Footer />
     </div>
