@@ -6,7 +6,8 @@ import { FaGasPump } from "react-icons/fa";
 import { FaRegSnowflake } from "react-icons/fa";
 import dataCar from "../../data/dataCar";
 import "../../css/home/car-section.css";
-const CarSelection = ({title}) => {
+
+const CarSelection = ({ title }) => {
   const dataSpecs = [
     {
       id: 1,
@@ -43,7 +44,7 @@ const CarSelection = ({title}) => {
             <div className="car-card" key={car.id}>
               {/* Hình ảnh xe */}
               <div className="car-image">
-                <img src={car.image} alt={car.name} />
+                <img src={car.image} alt={car.name} loading="lazy" />
               </div>
 
               {/* Nội dung xe */}

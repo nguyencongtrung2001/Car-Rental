@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { FaGasPump, FaRegSnowflake, FaUsers } from "react-icons/fa";
 import { IoCarSport } from "react-icons/io5";
@@ -13,6 +11,10 @@ import mercedes from "../assets/brand/mercedes.png";
 import jeep from "../assets/brand/jeep.png";
 import bmw from "../assets/brand/bmw.png";
 import audi from "../assets/brand/audi.png";
+
+// Lazy load Header and Footer components
+const Header = React.lazy(() => import("../components/Header"));
+const Footer = React.lazy(() => import("../components/Footer"));
 
 const Vehicles = () => {
   const [selectedCategory, setSelectedCategory] = useState("All vehicles");
@@ -40,35 +42,19 @@ const Vehicles = () => {
   };
 
   const carBrands = [
-    {
-      name: "Toyota",
-      logo: toyota,
-    },
-    {
-      name: "Ford",
-      logo: ford,
-    },
-    {
-      name: "Mercedes",
-      logo: mercedes,
-    },
-    {
-      name: "Jeep",
-      logo: jeep,
-    },
-    {
-      name: "BMW",
-      logo: bmw,
-    },
-    {
-      name: "Audi",
-      logo: audi,
-    },
+    { name: "Toyota", logo: toyota },
+    { name: "Ford", logo: ford },
+    { name: "Mercedes", logo: mercedes },
+    { name: "Jeep", logo: jeep },
+    { name: "BMW", logo: bmw },
+    { name: "Audi", logo: audi },
   ];
 
   return (
     <div className="vehicles-page">
-      <Header />
+      <Suspense fallback={<div>Loading Header...</div>}>
+        <Header />
+      </Suspense>
 
       {/* Header Section */}
       <section className="vehicles-header">
@@ -98,9 +84,9 @@ const Vehicles = () => {
         <div className="vehicles-container">
           {filteredCars.map((car) => (
             <div key={car.id} className="vehicle-card">
-              {/* Car Image */}
+              {/* Car Image with Lazy Loading */}
               <div className="vehicle-image">
-                <img src={car.image} alt={car.name} />
+                <img src={car.image} alt={car.name} loading="lazy" />
               </div>
 
               {/* Car Info */}
@@ -146,15 +132,15 @@ const Vehicles = () => {
         <div className="brands-container">
           {carBrands.map((brand, index) => (
             <div key={index} className="brand-logo">
-              <img src={brand.logo} alt={brand.name} />
+              <img src={brand.logo} alt={brand.name} loading="lazy" />
             </div>
           ))}
         </div>
       </section>
 
- 
-
-      <Footer />
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
