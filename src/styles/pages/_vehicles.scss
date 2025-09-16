@@ -1,0 +1,278 @@
+.vehicles-page {
+  min-height: 100vh;
+  background-color: $background-primary;
+}
+
+// Header Section
+.vehicles-header {
+  background: $background-secondary;
+  padding: $spacing-2xl 0;
+  text-align: center;
+
+  &-container {
+    @include container;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-xl;
+  }
+
+  // Category Filters
+  .category-filters {
+    @include flex-center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+
+    .category-btn {
+      @include flex-center;
+      gap: $spacing-sm;
+      background: $background-primary;
+      border: 2px solid $border-color;
+      padding: 0.75rem $spacing-lg;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: $font-size-md;
+      font-weight: $font-weight-medium;
+      color: $text-secondary;
+
+      &.active {
+        background: $primary-color;
+        border-color: $primary-color;
+        color: $text-light;
+      }
+
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+
+        &.active {
+          color: $text-light;
+        }
+      }
+
+      svg {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+}
+
+// Vehicles Grid
+.vehicles-grid {
+  padding: $spacing-2xl 0;
+  background: $background-primary;
+
+  .vehicles-container {
+    @include container;
+    @include grid-responsive(1, 2, 3, $spacing-xl);
+    min-width: 350px;
+  }
+
+  // Vehicle Card
+  .vehicle-card {
+    @include card;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    @include card-hover;
+
+    // Vehicle Image
+    .vehicle-image {
+      height: 200px;
+      background: $background-secondary;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        max-width: 80%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover .vehicle-image img {
+      transform: scale(1.05);
+    }
+
+    // Vehicle Info
+    .vehicle-info {
+      padding: $spacing-lg;
+
+      .vehicle-header {
+        @include flex-between;
+        align-items: flex-start;
+        margin-bottom: $spacing-sm;
+
+        .vehicle-name {
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+          margin: 0;
+        }
+
+        .vehicle-price {
+          text-align: right;
+
+          .price {
+            display: block;
+            font-size: $font-size-2xl;
+            font-weight: $font-weight-bold;
+            color: $primary-color;
+            line-height: 1;
+          }
+
+          .price-period {
+            font-size: $font-size-sm;
+            color: $text-muted;
+          }
+        }
+      }
+
+      .vehicle-type {
+        color: $text-muted;
+        font-size: $font-size-sm;
+        margin-bottom: $spacing-md;
+      }
+
+      // Vehicle Specifications
+      .vehicle-specs {
+        @include flex-between;
+        margin-bottom: $spacing-lg;
+        gap: $spacing-md;
+
+        .spec-item {
+          @include flex-center;
+          gap: $spacing-sm;
+          font-size: $font-size-sm;
+          color: $text-secondary;
+
+          svg {
+            font-size: $font-size-md;
+            color: $text-muted;
+          }
+        }
+      }
+
+      // View Details Button
+      .view-details-btn {
+        @include button-primary;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: $font-size-md;
+      }
+    }
+  }
+}
+
+// Brands Section (reuse from contact page)
+.brands-section {
+  background: $background-secondary;
+  padding: $spacing-2xl 0;
+
+  .brands-container {
+    @include container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-xl;
+
+    .brand-logo {
+      width: 120px;
+      height: 60px;
+      @include flex-center;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      &:hover img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+// Mobile responsive
+@include tablet {
+  .vehicles-grid .vehicles-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@include mobile {
+  .vehicles-header {
+    h1 {
+      font-size: $font-size-3xl;
+    }
+
+    .category-filters {
+      flex-direction: column;
+      align-items: center;
+
+      .category-btn {
+        width: 200px;
+        justify-content: center;
+      }
+    }
+  }
+
+  .vehicles-grid {
+    .vehicles-container {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+
+    .vehicle-card {
+      max-width: 400px;
+      margin: 0 auto;
+
+      .vehicle-info {
+        padding: $spacing-md;
+
+        .vehicle-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: $spacing-sm;
+
+          .vehicle-price {
+            text-align: left;
+          }
+        }
+
+        .vehicle-specs {
+          flex-direction: column;
+          gap: $spacing-sm;
+
+          .spec-item {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .brands-section .brands-container {
+    justify-content: center;
+    gap: $spacing-md;
+
+    .brand-logo {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}

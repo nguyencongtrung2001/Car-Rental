@@ -2,7 +2,6 @@ import React from 'react';
 import { GrMapLocation } from "react-icons/gr";
 import { TbWallet } from "react-icons/tb";
 import { PiCarProfileLight } from "react-icons/pi";
-import "../../css/home/feature.css" ;
 
 const Feature = () => {
   const cardInfor = [

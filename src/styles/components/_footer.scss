@@ -1,0 +1,154 @@
+.footer {
+  background: $background-primary;
+  padding: $spacing-xl $spacing-md;
+  width: 100%;
+  border-top: 1px solid $border-light;
+
+  &-container {
+    @include container;
+    @include flex-column;
+    gap: $spacing-xl;
+  }
+
+  // Top section
+  &-top {
+    @include flex-column;
+    align-items: flex-start;
+    gap: $spacing-md;
+  }
+
+  &-logo {
+    @include flex-center;
+    gap: $spacing-sm;
+
+    &-icon {
+      font-size: 1.8rem;
+      color: $text-primary;
+    }
+
+    &-text {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xl;
+    }
+  }
+
+  &-description {
+    max-width: 300px;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+    color: $text-primary;
+  }
+
+  &-socials {
+    display: flex;
+    gap: $spacing-sm;
+
+    .social-icon {
+      background: $text-primary;
+      color: $text-light;
+      font-size: $font-size-lg;
+      width: 30px;
+      height: 30px;
+      @include flex-center;
+      border-radius: $border-radius-full;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+
+  // Contact section
+  &-contact {
+    @include flex-between;
+    gap: $spacing-xl;
+    flex-wrap: wrap;
+
+    .contact-item {
+      @include flex-center;
+      gap: 0.8rem;
+    }
+
+    .contact-icon {
+      background: $secondary-color;
+      color: $text-light;
+      font-size: 1.4rem;
+      width: 42px;
+      height: 42px;
+      @include flex-center;
+      border-radius: $border-radius-full;
+    }
+
+    .contact-text {
+      @include flex-column;
+
+      .contact-title {
+        font-size: $font-size-sm;
+        color: $text-secondary;
+      }
+
+      .contact-detail {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  // Links section
+  &-links {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacing-2xl;
+  }
+
+  &-column {
+    h4 {
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: $font-size-sm;
+      color: $text-primary;
+      margin-bottom: $spacing-sm;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // App buttons
+  .app-buttons {
+    @include flex-column;
+    gap: 0.8rem;
+
+    .download-btn {
+      width: 140px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Bottom section
+  &-bottom {
+    text-align: center;
+    font-size: $font-size-xs;
+    color: $text-muted;
+    margin-top: $spacing-md;
+  }
+}

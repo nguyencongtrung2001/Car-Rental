@@ -1,5 +1,4 @@
 import React from 'react';
-import "../../css/home/hero.css";
 import car from '../../assets/cart.png'
 const Hero = () => {
   const handleSubmit = (e) => {

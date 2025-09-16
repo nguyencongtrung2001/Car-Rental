@@ -4,7 +4,6 @@ import { BsPeople } from "react-icons/bs";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
 // import pocher from '../assets/porcherngang.png'
-import "../../css/home/fact.css";
 
 const Fact = () => {
   const dataFact = [

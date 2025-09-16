@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaCar, FaBars, FaTimes } from "react-icons/fa";
-import '../css/header.css';
 import { FaPhoneAlt } from "react-icons/fa";
 
 const Header = () => {

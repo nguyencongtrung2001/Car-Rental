@@ -5,7 +5,6 @@ import { TbAutomaticGearbox } from "react-icons/tb";
 import { FaGasPump } from "react-icons/fa";
 import { FaRegSnowflake } from "react-icons/fa";
 import dataCar from "../../data/dataCar";
-import "../../css/home/car-section.css";
 
 const CarSelection = ({ title }) => {
   const dataSpecs = [

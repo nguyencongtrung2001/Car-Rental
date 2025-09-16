@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../css/login.css";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";

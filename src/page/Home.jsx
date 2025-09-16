@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import '../css/home/home.css'
 import Hero from "../components/home/Hero";
 import Feature from "../components/home/Feature";
 import StatsSection from "../components/home/StatsSection";

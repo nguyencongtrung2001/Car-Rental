@@ -1,0 +1,120 @@
+.hero {
+  background: $background-primary;
+  width: 100%;
+
+  &-container {
+    background: rgba($primary-color, 0.9);
+    padding: $spacing-2xl;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include container;
+    border-radius: $border-radius-2xl;
+    flex-wrap: wrap;
+    gap: $spacing-xl;
+    color: $text-light;
+    position: relative;
+  }
+
+  &-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 450px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &-content {
+    flex: 2;
+    min-width: 300px;
+    position: relative;
+  }
+
+  &-title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    max-width: 600px;
+    line-height: 55px;
+  }
+
+  &-status {
+    max-width: 550px;
+    margin-bottom: 20px;
+  }
+
+  &-button {
+    @include button-secondary;
+    padding: 0.75rem $spacing-lg;
+    font-size: $font-size-lg;
+    margin-top: 10px;
+  }
+
+  .booking-form {
+    background: $background-primary;
+    border-radius: $border-radius-2xl;
+    padding: $spacing-xl;
+    box-shadow: $shadow-xl;
+    flex: 1;
+    min-width: 300px;
+    @include flex-column;
+    gap: $spacing-md;
+    color: $text-primary;
+    position: relative;
+
+    h2 {
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-md;
+      text-align: center;
+    }
+
+    .form-field {
+      @include flex-column;
+      gap: $spacing-sm;
+
+      label {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+      }
+
+      input,
+      select {
+        @include form-input;
+      }
+    }
+
+    .book-now-btn {
+      @include button-secondary;
+      padding: 0.75rem;
+      font-size: $font-size-lg;
+    }
+  }
+
+  // Mobile responsive
+  @include mobile {
+    &-container {
+      flex-direction: column;
+      padding: $spacing-lg;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    &-button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .booking-form {
+      width: 100%;
+    }
+  }
+}

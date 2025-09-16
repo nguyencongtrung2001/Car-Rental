@@ -1,0 +1,93 @@
+.login {
+  background: #f5f5f5;
+  @include flex-center;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+
+  &-container {
+    @include flex-column;
+    align-items: center;
+    gap: $spacing-lg;
+    padding: 2.5rem $spacing-xl;
+    border-radius: 15px;
+    background: $background-primary;
+    box-shadow: $shadow-xl;
+    width: 350px;
+  }
+
+  &-title {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  &-form {
+    @include flex-column;
+    gap: $spacing-md;
+    width: 100%;
+  }
+
+  &-input {
+    @include flex-center;
+    gap: $spacing-sm;
+    padding: 0.6rem $spacing-md;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    background: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus-within {
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba($primary-color, 0.4);
+    }
+
+    svg {
+      color: $primary-color;
+      font-size: $font-size-lg;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: $font-size-md;
+      color: $text-primary;
+    }
+  }
+
+  .show-pass {
+    font-size: $font-size-sm;
+    color: $primary-color;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-dark;
+      text-decoration: underline;
+    }
+  }
+
+  &-btn {
+    @include button-primary;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: $font-size-md;
+    border-radius: 10px;
+  }
+
+  // Mobile responsive
+  @include mobile {
+    &-container {
+      width: 90%;
+      padding: $spacing-xl $spacing-md;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+    }
+  }
+}

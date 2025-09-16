@@ -1,0 +1,79 @@
+.facts-section {
+  background: $background-primary;
+  padding: $spacing-2xl $spacing-md;
+  width: 100%;
+
+  .facts-container {
+    @include flex-column;
+    align-content: center;
+    text-align: center;
+    background: rgba($primary-color, 0.9);
+    @include container;
+    border-radius: $border-radius-2xl;
+    color: $text-light;
+    padding: 2.5rem;
+
+    .fact-title {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: 10px;
+    }
+
+    .fact-description {
+      max-width: 500px;
+      align-self: center;
+      line-height: 1.5;
+      font-size: 1.9;
+    }
+  }
+
+  .facts-section__list {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-xl;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .fact-list-item {
+      @include flex-center;
+      gap: 0.8rem;
+      background: $background-primary;
+      border-radius: $border-radius-xl;
+      padding: 0.8rem 1.2rem;
+      min-width: 180px;
+      max-width: 220px;
+      box-shadow: $shadow-md;
+      transition: transform 0.3s ease;
+
+      .item__icon {
+        content: " ";
+        background: $secondary-color;
+        width: 55px;
+        height: 55px;
+        @include flex-center;
+        padding: 10px;
+        border-radius: 10px;
+        color: $text-light;
+        flex-shrink: 0;
+      }
+
+      .item-element {
+        @include flex-column;
+        align-items: flex-start;
+
+        .item__numbers {
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+          font-size: $font-size-xl;
+        }
+
+        .item__label {
+          font-size: $font-size-sm;
+          color: $text-secondary;
+        }
+      }
+    }
+  }
+}

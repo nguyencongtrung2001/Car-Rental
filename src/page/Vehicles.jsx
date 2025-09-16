@@ -4,7 +4,6 @@ import { TbAutomaticGearbox } from "react-icons/tb";
 import { FaGasPump, FaRegSnowflake, FaUsers } from "react-icons/fa";
 import { IoCarSport } from "react-icons/io5";
 import dataCar from "../data/dataCar";
-import "../css/vehicles.css";
 import toyota from "../assets/brand/toyota.png";
 import ford from "../assets/brand/ford.png";
 import mercedes from "../assets/brand/mercedes.png";

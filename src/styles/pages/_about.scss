@@ -1,0 +1,459 @@
+.about-page {
+  min-height: 100vh;
+  background-color: $background-primary;
+}
+
+// Hero Section
+.about-hero {
+  color: $text-primary;
+  padding: $spacing-3xl 0;
+  text-align: center;
+
+  &-container {
+    @include container;
+  }
+
+  .breadcrumb {
+    h1 {
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      font-size: $font-size-md;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Main Content
+.about-content {
+  padding: $spacing-3xl 0;
+  background: $background-primary;
+
+  .about-intro {
+    @include flex-between;
+    align-items: center;
+    gap: $spacing-xl;
+  }
+
+  .about-container {
+    @include container;
+  }
+
+  .about-intro h2 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+
+  .intro-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xl;
+    justify-content: center;
+
+    .feature-card {
+      flex: 1 1 calc(50% - 2rem);
+      max-width: calc(50% - 2rem);
+      text-align: center;
+      padding: $spacing-xl;
+      border-radius: $border-radius-lg;
+      transition: transform 0.3s ease;
+      background: $background-secondary;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: $spacing-md;
+      }
+
+      h3 {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: $text-primary;
+        margin-bottom: $spacing-md;
+      }
+
+      p {
+        color: $text-secondary;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Stats Section
+.about-stats {
+  background: $background-secondary;
+  padding: $spacing-2xl 0;
+
+  .stats-container {
+    @include container;
+    @include flex-center;
+    gap: $spacing-3xl;
+    flex-wrap: wrap;
+
+    .stat-item {
+      @include flex-center;
+      gap: $spacing-md;
+      background: $background-primary;
+      padding: $spacing-xl;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+      min-width: 200px;
+
+      .stat-icon {
+        background: $secondary-color;
+        color: $text-light;
+        width: 60px;
+        height: 60px;
+        border-radius: $border-radius-lg;
+        @include flex-center;
+        font-size: $font-size-2xl;
+      }
+
+      .stat-content {
+        h3 {
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-bold;
+          color: $primary-color;
+          margin-bottom: 0.25rem;
+        }
+
+        p {
+          color: $text-secondary;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}
+
+// Gallery Section
+.about-gallery {
+  padding: $spacing-3xl 0;
+  background: $background-primary;
+
+  .about-container {
+    @include flex-center;
+    gap: $spacing-3xl;
+    flex-wrap: wrap;
+  }
+
+  .gallery-content {
+    flex: 1;
+    min-width: 300px;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: $spacing-xl;
+    }
+
+    .memories-list {
+      @include flex-column;
+      gap: $spacing-md;
+
+      .memory-item {
+        @include flex-center;
+        gap: $spacing-md;
+
+        .memory-dot {
+          width: 12px;
+          height: 12px;
+          background: $primary-color;
+          border-radius: $border-radius-full;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .gallery-video {
+    flex: 1;
+    min-width: 300px;
+
+    .video-placeholder {
+      position: relative;
+      border-radius: $border-radius-lg;
+      overflow: hidden;
+      box-shadow: $shadow-lg;
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        color: $text-light;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// App Download Section
+.app-download-section {
+  background: $primary-color;
+  padding: $spacing-3xl 0;
+  border-radius: 15px;
+  margin: $spacing-xl;
+
+  .app-download-container {
+    @include container;
+  }
+
+  .app-download-content {
+    @include flex-center;
+    gap: $spacing-2xl;
+    color: $text-light;
+
+    .app-phone-wrapper {
+      @include flex-center;
+      flex: 0 0 250px;
+
+      .app-phone-frame img {
+        width: 230px;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .app-download-info {
+      flex: 1;
+      max-width: 600px;
+
+      .app-download-label {
+        color: $secondary-color;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+        display: block;
+        margin-bottom: $spacing-sm;
+      }
+
+      .app-download-title {
+        font-size: 2.5rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-md;
+      }
+
+      .app-download-description {
+        line-height: 1.6;
+        opacity: 0.9;
+        margin-bottom: $spacing-xl;
+        max-width: 500px;
+      }
+
+      .app-store-buttons {
+        display: flex;
+        gap: $spacing-md;
+
+        .app-store-btn,
+        .google-play-btn {
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+
+          img {
+            width: 150px;
+            height: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Reviews Section
+.about-reviews {
+  padding: $spacing-3xl 0;
+  background: $background-secondary;
+
+  .about-container {
+    @include container;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-2xl;
+  }
+
+  .reviews-grid {
+    @include grid-responsive(1, 2, 3);
+
+    .review-card {
+      @include card;
+      padding: $spacing-xl;
+
+      p {
+        font-style: italic;
+        line-height: 1.6;
+        color: $text-secondary;
+        margin-bottom: $spacing-lg;
+      }
+
+      .reviewer {
+        @include flex-center;
+        gap: $spacing-md;
+
+        .reviewer-avatar {
+          width: 50px;
+          height: 50px;
+          background: $primary-color;
+          border-radius: $border-radius-full;
+        }
+
+        .reviewer-info {
+          h4 {
+            color: $text-primary;
+            font-weight: $font-weight-bold;
+            margin-bottom: 0.25rem;
+          }
+
+          span {
+            color: $text-muted;
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+  }
+}
+
+// FAQ Section
+.about-faq {
+  padding: $spacing-3xl 0;
+  background: $background-primary;
+
+  .about-container {
+    @include container;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-2xl;
+  }
+
+  .faq-list {
+    @include flex-column;
+    gap: $spacing-lg;
+
+    .faq-item {
+      border: 1px solid $border-color;
+      border-radius: $border-radius-md;
+      padding: $spacing-lg;
+
+      h3 {
+        color: $text-primary;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        color: $text-secondary;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// CTA Section
+.about-cta {
+  background: $primary-color;
+  color: $text-light;
+  padding: $spacing-3xl 0;
+  text-align: center;
+
+  .cta-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      @include button-secondary;
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// Mobile responsive
+@include mobile {
+  .about-hero .breadcrumb h1 {
+    font-size: $font-size-3xl;
+  }
+
+  .about-content .about-intro h2 {
+    font-size: $font-size-3xl;
+  }
+
+  .about-content .intro-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+  }
+
+  .about-gallery .about-container {
+    flex-direction: column;
+  }
+
+  .about-cta {
+    h2 {
+      font-size: $font-size-3xl;
+    }
+
+    p {
+      font-size: $font-size-md;
+    }
+  }
+}

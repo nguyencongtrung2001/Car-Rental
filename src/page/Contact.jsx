@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { IoLocation, IoMail, IoCall, IoTime } from "react-icons/io5";
-import "../css/contact.css";
 import toyota from "../assets/brand/toyota.png";
 import ford from "../assets/brand/ford.png";
 import mercedes from "../assets/brand/mercedes.png";

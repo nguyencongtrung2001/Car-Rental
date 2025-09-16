@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/home/stats-section.css";
 import headcart from '../../assets/image.png'
 const StatsSection = () => {
   const statsItems = [

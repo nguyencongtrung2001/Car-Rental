@@ -1,0 +1,312 @@
+.contact-page {
+  min-height: 100vh;
+  background-color: $background-primary;
+}
+
+// Breadcrumb
+.breadcrumb {
+  background-color: $background-secondary;
+  padding: $spacing-xl 0;
+  text-align: center;
+
+  &-container {
+    @include container;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &-path {
+    color: $text-muted;
+    font-size: $font-size-md;
+
+    span:first-child {
+      color: $primary-color;
+    }
+  }
+}
+
+// Hero Section
+.booking-hero-section {
+  background: $background-primary;
+  padding: $spacing-2xl $spacing-md;
+  overflow: hidden;
+
+  .booking-hero-container {
+    @include container;
+    display: flex;
+    gap: $spacing-2xl;
+    align-items: center;
+    position: relative;
+  }
+
+  // Booking Form
+  .booking-form-section {
+    flex: 1;
+    min-width: 350px;
+    z-index: 10;
+
+    .booking-form {
+      background: $primary-color;
+      border-radius: $border-radius-2xl;
+      padding: $spacing-xl;
+      color: $text-light;
+      @include flex-column;
+      gap: $spacing-md;
+      width: 100%;
+      box-shadow: $shadow-xl;
+
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-md;
+        text-align: center;
+      }
+
+      .form-field {
+        @include flex-column;
+
+        input,
+        select {
+          @include form-input;
+          background: $background-primary;
+          color: $text-primary;
+
+          &::placeholder {
+            color: #999;
+          }
+        }
+      }
+
+      .book-now-btn {
+        @include button-secondary;
+        padding: 0.75rem;
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  // Hero Image
+  .hero-image-section {
+    flex: 2;
+    min-width: 400px;
+    @include flex-center;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: $border-radius-2xl;
+      box-shadow: $shadow-xl;
+    }
+  }
+}
+
+// Contact Info Section
+.contact-info-section {
+  background: $background-secondary;
+  padding: $spacing-2xl $spacing-md;
+
+  .contact-info-container {
+    @include container;
+    @include grid-responsive(1, 2, 4);
+
+    .contact-info-card {
+      @include card;
+      padding: $spacing-xl;
+      @include flex-center;
+      gap: $spacing-md;
+      @include card-hover;
+
+      .contact-info-icon {
+        background: $secondary-color;
+        color: $text-light;
+        font-size: $font-size-2xl;
+        width: 50px;
+        height: 50px;
+        border-radius: $border-radius-full;
+        @include flex-center;
+        flex-shrink: 0;
+      }
+
+      .contact-info-content {
+        h3 {
+          font-size: $font-size-lg;
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+          margin-bottom: 0.25rem;
+        }
+
+        p {
+          color: $text-secondary;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}
+
+// Blog Section
+.blog-section {
+  background: $background-primary;
+  padding: $spacing-3xl $spacing-md;
+
+  .blog-container {
+    @include container;
+
+    h2 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      color: $text-primary;
+      margin-bottom: $spacing-2xl;
+    }
+
+    .blog-grid {
+      @include grid-responsive(1, 2, 3);
+
+      .blog-card {
+        @include card;
+        overflow: hidden;
+        @include card-hover;
+
+        .blog-image {
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .blog-content {
+          padding: $spacing-lg;
+
+          h3 {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bold;
+            color: $text-primary;
+            margin-bottom: $spacing-sm;
+            line-height: 1.4;
+          }
+
+          .blog-meta {
+            color: $text-muted;
+            font-size: $font-size-sm;
+
+            span:nth-child(2) {
+              margin: 0 $spacing-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Brands Section
+.brands-section {
+  background: $background-secondary;
+  padding: $spacing-2xl $spacing-md;
+
+  .brands-container {
+    @include container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-xl;
+
+    .brand-logo {
+      width: 120px;
+      height: 60px;
+      @include flex-center;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      &:hover img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+// Mobile responsive
+@include tablet {
+  .booking-hero-section .booking-hero-container {
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xl;
+
+    .booking-form-section {
+      flex: none;
+      width: 100%;
+      max-width: 500px;
+      order: 1;
+    }
+
+    .hero-image-section {
+      width: 100%;
+      order: 2;
+
+      img {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .breadcrumb h1 {
+    font-size: $font-size-3xl;
+  }
+
+  .contact-info-section .contact-info-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section .blog-container .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brands-section .brands-container {
+    justify-content: center;
+    gap: $spacing-md;
+
+    .brand-logo {
+      width: 100px;
+      height: 50px;
+    }
+  }
+
+  .booking-hero-section {
+    padding: $spacing-xl $spacing-md;
+
+    .booking-form-section .booking-form {
+      padding: $spacing-lg;
+    }
+
+    .hero-image-section img {
+      height: 250px;
+    }
+  }
+}

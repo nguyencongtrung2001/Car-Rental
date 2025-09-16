@@ -1,0 +1,142 @@
+.header {
+  background: $background-primary;
+  width: 100%;
+  margin: 0;
+
+  &-container {
+    @include flex-between;
+    padding: $spacing-md $spacing-xl;
+    background-color: $background-primary;
+    position: sticky;
+    top: 0;
+    z-index: $z-index-sticky;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    @include flex-center;
+    gap: $spacing-md;
+
+    h1 {
+      font-size: $font-size-2xl;
+      color: $text-primary;
+    }
+
+    .icon-logo {
+      font-size: 2rem;
+      color: $text-primary;
+    }
+  }
+
+  &__nav {
+    display: flex;
+
+    .nav-link {
+      display: flex;
+      gap: $spacing-xl;
+      list-style: none;
+      font-size: $font-size-lg;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: $text-primary;
+      transition: color 0.3s ease;
+      padding: $spacing-sm $spacing-md;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &.active {
+        color: $primary-color;
+        font-weight: $font-weight-bold;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+  &__contact {
+    @include flex-center;
+    gap: $spacing-sm;
+    position: relative;
+
+    .contact-info {
+      @include flex-column;
+    }
+
+    .icon-contact {
+      font-size: 2rem;
+      color: #e6e5e7;
+      z-index: $z-index-sticky;
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+
+      &::after {
+        content: " ";
+        border-radius: $border-radius-full;
+        background: $primary-color;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+
+    .text-help {
+      font-size: $font-size-sm;
+      color: $text-secondary;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-primary;
+    }
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: $font-size-2xl;
+    cursor: pointer;
+    color: $text-primary;
+  }
+
+  // Mobile responsive
+  @include mobile {
+    &-container {
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    &__nav {
+      display: none;
+      width: 100%;
+      padding: $spacing-md 0;
+
+      &.mobile-open {
+        display: block;
+      }
+
+      .nav-link {
+        flex-direction: column;
+        gap: $spacing-md;
+        text-align: center;
+      }
+    }
+
+    .mobile-menu-toggle {
+      display: block;
+    }
+
+    &__contact {
+      display: none;
+    }
+  }
+}

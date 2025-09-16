@@ -1,0 +1,209 @@
+.car-detail {
+  min-height: 100vh;
+  background-color: $background-primary;
+
+  @include mobile {
+    overflow-x: hidden;
+  }
+}
+
+// Car section
+.car {
+  padding: 40px 20px;
+  background-color: $background-secondary;
+  max-width: 100%;
+
+  &-container {
+    @include container;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 $spacing-md;
+  }
+
+  // Image and Gallery section
+  &-detail__image {
+    flex: 1;
+    @include flex-column;
+    gap: 20px;
+    min-width: 200px;
+  }
+
+  &-detail__title {
+    text-align: left;
+  }
+
+  &-detail__name {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+  }
+
+  &-detail__price {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+  }
+
+  &-detail__unit {
+    font-size: $font-size-md;
+    color: $text-muted;
+    margin-left: 5px;
+  }
+
+  &-detail__img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-md;
+      object-fit: cover;
+    }
+  }
+
+  // Gallery
+  &-gallery {
+    @include grid(auto-fit, 10px);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    .gallery-image {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: $border-radius-md;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Specifications section
+  &-detail__specs {
+    flex: 1;
+    background-color: $background-primary;
+    padding: 20px;
+    @include flex-column;
+    gap: $spacing-lg;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-md;
+    min-width: 300px;
+    align-self: flex-end;
+    margin-bottom: 40px;
+
+    h3 {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-semibold;
+      color: $text-primary;
+    }
+  }
+
+  // Spec grid
+  &-detail__spec-grid {
+    @include grid(3, 15px);
+
+    .spec-card-item {
+      @include flex-center;
+      gap: 10px;
+      background-color: $background-muted;
+      padding: 12px;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-sm;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      .icon-spec {
+        font-size: 1.8rem;
+        color: $text-secondary;
+      }
+
+      .spec-info {
+        @include flex-column;
+
+        .spec-title {
+          font-size: $font-size-sm;
+          color: $text-muted;
+        }
+
+        .spec-name {
+          font-size: $font-size-md;
+          font-weight: $font-weight-semibold;
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  // Rent button
+  &-rent-btn {
+    @include button-primary;
+    padding: 12px 20px;
+    font-size: $font-size-lg;
+    margin-top: 10px;
+  }
+
+  // Equipment section
+  &-detail__equipment {
+    @include grid(3, 15px);
+    width: 100%;
+    margin-top: 15px;
+
+    &-item {
+      background-color: $background-muted;
+      padding: 10px 15px;
+      border-radius: $border-radius-md;
+      text-align: center;
+      font-size: $font-size-md;
+      font-weight: $font-weight-medium;
+      color: $text-primary;
+      box-shadow: $shadow-sm;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: #e2e8f0;
+      }
+    }
+  }
+}
+
+// Responsive design
+@include tablet {
+  .car-container {
+    gap: 20px;
+  }
+}
+
+@include mobile {
+  .car-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car-detail__img,
+  .car-detail__specs {
+    width: 100%;
+    max-width: 100%;
+    align-self: unset;
+    margin-top: 0;
+  }
+
+  .car-detail__equipment {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

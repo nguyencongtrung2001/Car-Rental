@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/footer.css";
 import { IoLocation } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
 import { FaPhoneAlt, FaCar, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";

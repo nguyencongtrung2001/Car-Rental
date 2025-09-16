@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/home/connect.css";
 import { IoCarSport } from "react-icons/io5";
 
 const Connect = () => {

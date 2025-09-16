@@ -1,0 +1,95 @@
+.download-app {
+  background: $background-primary;
+  width: 100%;
+  padding: $spacing-3xl $spacing-md;
+
+  .download-container {
+    @include flex-between;
+    flex-wrap: wrap;
+    @include container;
+    gap: $spacing-xl;
+    padding: $spacing-xl;
+  }
+
+  .download-content {
+    flex: 1;
+    min-width: 300px;
+
+    &__title {
+      font-weight: $font-weight-bold;
+      font-size: 2.5rem;
+      color: $text-primary;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    &__desc {
+      font-size: $font-size-md;
+      color: $text-secondary;
+      line-height: 1.6;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      display: flex;
+      gap: $spacing-lg;
+      flex-wrap: wrap;
+
+      .btn-download {
+        width: 180px;
+        height: 55px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: $shadow-lg;
+        }
+
+        &.app-store {
+          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY_o-G9mMFogqWSeYzzRALpqqr8E-pvKn39w&s");
+        }
+
+        &.ch-play {
+          background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png");
+        }
+      }
+    }
+  }
+
+  .download-image {
+    flex: 1;
+    min-width: 300px;
+    @include flex-center;
+
+    .image-couplephone {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  // Mobile responsive
+  @include mobile {
+    .download-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .download-content {
+      &__btn {
+        justify-content: center;
+      }
+
+      &__title {
+        font-size: $font-size-3xl;
+      }
+    }
+  }
+}

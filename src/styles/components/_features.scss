@@ -1,0 +1,57 @@
+.features {
+  background: $background-primary;
+  padding: $spacing-xl $spacing-2xl;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-2xl;
+    justify-content: center;
+    @include container;
+    margin: $spacing-md auto;
+  }
+
+  &__item {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+
+    &__icon {
+      font-size: 3rem;
+      color: $primary-color;
+      margin-bottom: 0.4rem;
+    }
+
+    &__text {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: $spacing-sm;
+    }
+
+    &__description {
+      font-size: $font-size-md;
+      color: $text-secondary;
+      max-width: 250px;
+    }
+  }
+
+  // Mobile responsive
+  @include mobile {
+    &-container {
+      flex-direction: column;
+      gap: $spacing-xl;
+    }
+
+    &__item {
+      min-width: 100%;
+
+      &__description {
+        max-width: 100%;
+      }
+    }
+  }
+}

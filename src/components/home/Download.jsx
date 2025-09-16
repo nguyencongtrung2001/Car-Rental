@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/home/download.css";
 import imgdownload from "../../assets/couplephone.avif";
 
 const Download = () => {

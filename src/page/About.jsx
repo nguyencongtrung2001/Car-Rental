@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { IoPlayCircle } from "react-icons/io5";
 import { FaCar, FaUsers, FaCalendarAlt, FaRoute } from "react-icons/fa";
-import "../css/about.css";
 
 const About = () => {
   const stats = [

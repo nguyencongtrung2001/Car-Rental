@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import dataCar from "../../data/dataCar";
-import "../../css/car/inforcar.css";
 import { GiPathDistance } from "react-icons/gi";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { FaGasPump, FaRegSnowflake, FaSdCard } from "react-icons/fa";
